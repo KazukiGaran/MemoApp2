@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { router, useNavigation } from 'expo-router'
 import { useEffect } from 'react'
 
@@ -15,9 +15,9 @@ const handlePress=(): void =>{
 const Index = (): JSX.Element => {
   const navigation = useNavigation()
   useEffect(() => {
-  navigation.setOptions({
-    headerRight: () => { return <LogOutButton />}
-  })
+    navigation.setOptions({
+      headerRight: () => { return <LogOutButton />}
+    })
   }, [])
 
   return(
